@@ -10,9 +10,9 @@
         }
     ],
     "require": {
-        "php":">=5.3"
+        "php":">=5.4"
     },
     "autoload": {
-      "psr-4": {"AliyunPorn\\": "src"}
+      "psr-0": {"AliyunPorn": "src"}
     }
 }

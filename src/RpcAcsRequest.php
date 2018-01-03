@@ -1,4 +1,5 @@
 <?php
+namespace AliyunPorn;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -27,7 +28,7 @@ abstract class RpcAcsRequest extends AcsRequest
         parent::__construct($product, $version, $actionName, $locationServiceCode, $locationEndpointType);
         $this->initialize();
     }
-    
+
     private function initialize()
     {
         $this->setMethod("GET");
@@ -78,7 +79,7 @@ abstract class RpcAcsRequest extends AcsRequest
             return substr($requestUrl, 0, -1);
         }
     }
-    
+
     private function computeSignature($parameters, $accessKeySecret, $iSigner)
     {
         ksort($parameters);
@@ -91,7 +92,7 @@ abstract class RpcAcsRequest extends AcsRequest
 
         return $signature;
     }
-    
+
     protected function percentEncode($str)
     {
         $res = urlencode($str);
@@ -100,12 +101,12 @@ abstract class RpcAcsRequest extends AcsRequest
         $res = preg_replace('/%7E/', '~', $res);
         return $res;
     }
-    
+
     public function getDomainParameter()
     {
         return $this->domainParameters;
     }
-    
+
     public function putDomainParameters($name, $value)
     {
         $this->domainParameters[$name] = $value;
