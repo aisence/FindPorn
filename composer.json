@@ -1,0 +1,16 @@
+{
+    "name": "dongmingcui/find-porn",
+    "description": "find video and picture include porn info",
+    "type": "libraray",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "DongMing.Cui",
+            "email": "xcode4@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+      "psr-4": {"AliyunPorn\\": "src"}
+    }
+}
