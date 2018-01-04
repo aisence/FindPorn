@@ -1,4 +1,5 @@
 <?php
+namespace AliyunPorn\Autoloader;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -28,7 +29,7 @@ class Autoloader
         "aliyun-php-sdk-core/Regions",
         "aliyun-php-sdk-core/Exception"
     );
-    
+
     public static function autoload($className)
     {
         foreach (self::$autoloadPathArray as $path) {
@@ -40,7 +41,7 @@ class Autoloader
             }
         }
     }
-    
+
     public static function addAutoloadPath($path)
     {
         array_push(self::$autoloadPathArray, $path);

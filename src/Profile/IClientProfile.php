@@ -1,4 +1,5 @@
 <?php
+namespace AliyunPorn\Profile;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -20,10 +21,10 @@
 interface IClientProfile
 {
     public function getSigner();
-    
+
     public function getRegionId();
-    
+
     public function getFormat();
-    
+
     public function getCredential();
 }

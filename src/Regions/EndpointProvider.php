@@ -1,4 +1,5 @@
 <?php
+namespace AliyunPorn\Regions;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -20,7 +21,7 @@
 class EndpointProvider
 {
     private static $endpoints;
-    
+
     public static function findProductDomain($regionId, $product)
     {
         if (null == $regionId || null == $product || null == self::$endpoints) {
@@ -33,7 +34,7 @@ class EndpointProvider
         }
         return null;
     }
-    
+
     private static function findProductDomainByProduct($productDomains, $product)
     {
         if (null == $productDomains) {
@@ -46,13 +47,13 @@ class EndpointProvider
         }
         return null;
     }
-    
-    
+
+
     public static function getEndpoints()
     {
         return self::$endpoints;
     }
-    
+
     public static function setEndpoints($endpoints)
     {
         self::$endpoints = $endpoints;

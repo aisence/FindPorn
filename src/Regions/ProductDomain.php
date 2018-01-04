@@ -1,4 +1,5 @@
 <?php
+namespace AliyunPorn\Regions;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -21,13 +22,13 @@ class ProductDomain
 {
     private $productName;
     private $domainName;
-    
+
     public function __construct($product, $domain)
     {
         $this->productName = $product;
         $this->domainName = $domain;
     }
-    
+
     public function getProductName()
     {
         return $this->productName;

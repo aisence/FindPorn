@@ -1,4 +1,5 @@
 <?php
+namespace AliyunPorn\Http;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -21,7 +22,7 @@ class HttpHelper
 {
     public static $connectTimeout = 30;//30 second
     public static $readTimeout = 80;//80 second
-    
+
     public static function curl($url, $httpMethod = "GET", $postFields = null, $headers = null)
     {
         $ch = curl_init();
@@ -36,7 +37,7 @@ class HttpHelper
         curl_setopt($ch, CURLOPT_FAILONERROR, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, is_array($postFields) ? self::getPostHttpBody($postFields) : $postFields);
-        
+
         if (self::$readTimeout) {
             curl_setopt($ch, CURLOPT_TIMEOUT, self::$readTimeout);
         }
