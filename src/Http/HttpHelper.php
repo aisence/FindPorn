@@ -18,6 +18,11 @@ namespace AliyunPorn\Http;
  * specific language governing permissions and limitations
  * under the License.
  */
+
+ define('ENABLE_HTTP_PROXY', false);
+ define('HTTP_PROXY_IP', '127.0.0.1');
+ define('HTTP_PROXY_PORT', '8888');
+
 use AliyunPorn\Exception\ClientException;
 class HttpHelper
 {
