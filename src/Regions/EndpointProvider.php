@@ -105,7 +105,7 @@ class EndpointProvider
             $endpoint = new Endpoint($region_ids[0], $region_ids, $product_domains);
             array_push($endpoints, $endpoint);
 
-            self::$endpoints = self::initEndpoints();
+            self::$endpoints = $endpoints;
         }
       }
 
