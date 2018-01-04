@@ -13,6 +13,6 @@
         "php":">=5.4"
     },
     "autoload": {
-      "psr-0": {"AliyunPorn": "src"}
+      "psr-4": {"AliyunPorn\\": "src"}
     }
 }

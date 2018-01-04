@@ -18,6 +18,7 @@ namespace AliyunPorn\Http;
  * specific language governing permissions and limitations
  * under the License.
  */
+use AliyunPorn\Exception\ClientException;
 class HttpHelper
 {
     public static $connectTimeout = 30;//30 second
