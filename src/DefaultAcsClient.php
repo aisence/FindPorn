@@ -18,6 +18,12 @@ namespace AliyunPorn;
  * specific language governing permissions and limitations
  * under the License.
  */
+use AliyunPorn\Exception\ClientException;
+use AliyunPorn\Exception\ServerException;
+use AliyunPorn\Http\HttpHelper;
+use AliyunPorn\Regions\EndpointProvider;
+use AliyunPorn\Regions\LocationService;
+
 class DefaultAcsClient implements IAcsClient
 {
     public $iClientProfile;

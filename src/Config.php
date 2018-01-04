@@ -18,6 +18,8 @@ namespace AliyunPorn;
  * specific language governing permissions and limitations
  * under the License.
  */
+use AliyunPorn\Autoloader\Autoloader;
+
 include_once 'Autoloader/Autoloader.php';
 include_once 'Regions/EndpointConfig.php';
 include_once 'Regions/LocationService.php';

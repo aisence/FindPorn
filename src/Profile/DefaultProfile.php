@@ -18,6 +18,13 @@ namespace AliyunPorn\Profile;
  * specific language governing permissions and limitations
  * under the License.
  */
+use AliyunPorn\Auth\Credential;
+use AliyunPorn\Auth\ShaHmac1Signer;
+use AliyunPorn\Regions\Endpoint;
+use AliyunPorn\Regions\EndpointProvider;
+use AliyunPorn\Regions\LocationService;
+use AliyunPorn\Regions\ProductDomain;
+
 class DefaultProfile implements IClientProfile
 {
 	private static $profile;
@@ -100,7 +107,7 @@ class DefaultProfile implements IClientProfile
 
 	public static function findEndpointByName($endpointName)
 	{
-		foreach (self::$endpoints as $key => $endpoint)
+	    foreach (self::$endpoints as $key => $endpoint)
 		{
 			if($endpoint->getName() == $endpointName)
 			{

@@ -19,6 +19,9 @@ namespace AliyunPorn\Regions;
  * under the License.
  */
 
+use AliyunPorn\Http\HttpHelper;
+use AliyunPorn\RpcAcsRequest;
+
 define("LOCATION_SERVICE_PRODUCT_NAME", "Location");
 define("LOCATION_SERVICE_DOMAIN", "location.aliyuncs.com");
 define("LOCATION_SERVICE_VERSION", "2015-06-12");
@@ -108,7 +111,7 @@ class LocationService
 
 		$requestUrl = $request->composeUrl($signer, $credential, self::$serviceDomain);
 
-		$httpResponse = HttpHelper::curl($requestUrl, $request->getMethod(), null, $request->getHeaders());
+        $httpResponse = HttpHelper::curl($requestUrl, $request->getMethod(), null, $request->getHeaders());
 
 		if (!$httpResponse->isSuccess())
 		{
